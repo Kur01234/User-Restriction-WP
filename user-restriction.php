@@ -1,7 +1,7 @@
 <?php
 /*
  * Plugin Name: Custom User Restriction
- * Author: Matteo Ruf
+ * Author: Kuro
  * Author URI: https://github.com/Kur01234
  * Version: 1.0
  * Description: Restrict acces to pages for All User Groups that are not selected.
@@ -41,12 +41,6 @@ function on_site_open() {
     }
    }
 }
-
-
-/**
- * @internal never define functions inside callbacks.
- * these functions could be run multiple times; this would result in a fatal error.
- */
 
 /**
  * custom option and settings
