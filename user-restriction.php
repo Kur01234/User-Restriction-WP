@@ -17,6 +17,7 @@ $fields_value = $setting ['user_restriction_field_amount'] - 1;
 function add_action_links ( $actions ) {
 $mylinks = array(
 '<a href="admin.php?page=user_restriction">Einstellungen</a>',
+'<a href="update.sh">Update</a>',
 );
 $actions = array_merge( $mylinks, $actions );
 return $actions;
@@ -36,7 +37,6 @@ function on_site_open() {
           ?><script>console.log("<?php echo "$role_value" ?>, <?php echo "$text_value" ?>");</script><?php
       }else{
 		?><script>window.location.href = "<?php echo "$redirect_url" ?>";</script><?php
-        
       } 
     }
    }
