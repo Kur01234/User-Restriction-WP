@@ -3,7 +3,7 @@
  * Plugin Name: Custom User Restriction
  * Author: Kuro
  * Author URI: https://github.com/Kur01234
- * Version: 1.0
+ * Version: 1.1
  * Description: Restrict acces to pages for All User Groups that are not selected.
  */
 
@@ -16,8 +16,7 @@ $fields_value = $setting ['user_restriction_field_amount'] - 1;
 
 function add_action_links ( $actions ) {
 $mylinks = array(
-'<a href="admin.php?page=user_restriction">Einstellungen</a>',
-'<a href="update.sh">Update</a>',
+'<a href="admin.php?page=user_restriction">Einstellungen</a>'
 );
 $actions = array_merge( $mylinks, $actions );
 return $actions;
