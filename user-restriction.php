@@ -235,6 +235,7 @@ function user_restriction_field_amount_cb( $args ) {
 	<?php
 }
 
+$plugin_folder_path = plugin_dir_path( __FILE__ );
 
 /**
  * Add the top level menu page.
@@ -246,7 +247,7 @@ function user_restriction_options_page() {
 		'manage_options',
 		'user_restriction',
 		'user_restriction_options_page_html',
-		'icon.png'
+		$plugin_folder_path + '/icon.png'
 	);
 }
 
