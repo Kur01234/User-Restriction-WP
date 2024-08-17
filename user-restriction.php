@@ -13,6 +13,14 @@ add_action("template_redirect", "on_site_open");
 $setting = get_option('user_restriction_options');
 $fields_value = $setting ['user_restriction_field_amount'] - 1;
 
+add_menu_page(
+    __('Poll','menu-user-restriction'), 
+    __('Poll','menu-user-restriction'), 
+    'manage_options', 
+    'manage-polls', 
+    'poll_page',
+    'icon.png' 
+);
 
 function add_action_links ( $actions ) {
 $mylinks = array(
