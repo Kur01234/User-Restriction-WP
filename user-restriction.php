@@ -22,7 +22,7 @@ $actions = array_merge( $mylinks, $actions );
 return $actions;
 }
 
-add_action( 'plugins_loaded', 'github_plugin_updater_test_init' );
+add_action( 'init', 'github_plugin_updater_test_init' );
 function github_plugin_updater_test_init() {
 
 	include_once 'updater.php';
