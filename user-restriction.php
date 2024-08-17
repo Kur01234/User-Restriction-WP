@@ -3,7 +3,7 @@
  * Plugin Name: Custom User Restriction
  * Author: Kuro
  * Author URI: https://github.com/Kur01234
- * Version: 1.3
+ * Version: 1.4
  * Description: Restrict acces to pages for All User Groups that are not selected.
  */
 
@@ -13,14 +13,6 @@ add_action("template_redirect", "on_site_open");
 $setting = get_option('user_restriction_options');
 $fields_value = $setting ['user_restriction_field_amount'] - 1;
 
-add_menu_page(
-    __('Poll','menu-user-restriction'), 
-    __('Poll','menu-user-restriction'), 
-    'manage_options', 
-    'manage-polls', 
-    'poll_page',
-    'icon.png' 
-);
 
 function add_action_links ( $actions ) {
 $mylinks = array(
@@ -30,7 +22,7 @@ $actions = array_merge( $mylinks, $actions );
 return $actions;
 }
 
-add_action( 'init', 'github_plugin_updater_test_init' );
+add_action( 'plugins_loaded', 'github_plugin_updater_test_init' );
 function github_plugin_updater_test_init() {
 
 	include_once 'updater.php';
@@ -253,7 +245,8 @@ function user_restriction_options_page() {
 		'User Restriction Options',
 		'manage_options',
 		'user_restriction',
-		'user_restriction_options_page_html'
+		'user_restriction_options_page_html',
+		'icon.png'
 	);
 }
 
