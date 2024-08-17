@@ -3,7 +3,7 @@
  * Plugin Name: Custom User Restriction
  * Author: Kuro
  * Author URI: https://github.com/Kur01234
- * Version: 1.9
+ * Version: 2.0
  * Description: Restrict acces to pages for All User Groups that are not selected.
  */
 
@@ -239,7 +239,7 @@ function user_restriction_field_amount_cb( $args ) {
  * Add the top level menu page.
  */
 function user_restriction_options_page() {
-	$plugin_icon_url = plugin_dir_url( __FILE__ ). '../assets/img/icon.png';
+	$plugin_icon_url = plugin_dir_url( __FILE__ ) + 'assets/img/icon.png';
 	add_menu_page(
 		'User Restriction',
 		'User Restriction Options',
